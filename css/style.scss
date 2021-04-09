@@ -1,0 +1,136 @@
+@import "./variables";
+@import "./header";
+@import "./about";
+@import "./pricing";
+@import "./contact";
+@import "./footer";
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: $red;
+}
+
+::selection {
+  color: white;
+  background: $red;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  /*background-color: #313036;*/
+  font-family: Arial, Helvetica, sans-serif;
+  a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+main {
+  margin: 0;
+}
+
+section {
+  padding: 50px 8%;
+}
+
+#start {
+  height: 100vh;
+  background: url(../images/main-bg.jpg), center no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo-span {
+  color: $red;
+}
+
+/*Start*/
+.start-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  width: 500px;
+  margin: 350px 0 0 150px;
+}
+
+.btn {
+  margin: 20px 0;
+  background-color: $red;
+  padding: 10px;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: $red;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  #start {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .logo {
+    font-size: 18px;
+  }
+  #start {
+    height: 60vh;
+    background-position: right;
+    .start-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 200px 0;
+      width: 100%;
+      h1 {
+        font-size: 35px;
+      }
+    }
+  }
+}

@@ -42,3 +42,29 @@
     }
   }
 }
+
+@media (max-width: 1290px) {
+  #pricing {
+    .pricing {
+      margin: 50px 0;
+      flex-direction: column;
+      .pricing-container {
+        margin: 30px 0;
+        width: 60%;
+      }
+      .pricing-container.pricing-main {
+        transform: scale(100%) translateY(0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #pricing {
+    .pricing {
+      .pricing-container {
+        width: 100%;
+      }
+    }
+  }
+}

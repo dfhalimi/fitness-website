@@ -20,6 +20,18 @@ header {
     padding: 0;
     li {
       font-size: 16px;
+      transition: 0.15s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: $red;
+      }
+    }
+    #close {
+      visibility: hidden;
+      transition: 0s;
+    }
+    .active {
+      color: $red;
     }
   }
 }
@@ -34,26 +46,36 @@ header {
       font-size: 20px;
     }
     ul {
-      transform: translateY(-16px);
       position: absolute;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       background-color: $red;
-      height: 300px;
+      height: 250px;
       width: 100%;
       top: 0;
       right: 0;
+      transform: translateY(-270px);
+      transition: 0s;
       li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $grey;
         width: 100%;
-        text-align: center;
         height: 50px;
-        a {
-          width: 100vw;
-          border: 1px solid white;
+        &:hover {
+          color: #fff;
+          background-color: $red;
         }
       }
+      #close {
+        visibility: visible;
+      }
+    }
+    .toggle-menu {
+      transform: translateY(-20px);
+      transition: 0.25s ease-in-out;
     }
   }
 }

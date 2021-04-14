@@ -21,10 +21,18 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
+      a {
+        transition: 0.2s ease-in-out;
+        &:hover {
+          color: $red;
+        }
+      }
       .footer-links {
         display: flex;
         ul {
           list-style: none;
+          padding: 0;
+          margin: 10px 15px;
           li {
             font-size: 14px;
             color: rgba(255, 255, 255, 0.8);
@@ -61,5 +69,18 @@ footer {
     background-color: $red;
     margin: auto 0 0 0;
     height: 5vh;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    height: auto;
+    .footer-upper {
+      flex-direction: column;
+      height: auto;
+      .footer-right {
+        margin: 20px 0;
+      }
+    }
   }
 }

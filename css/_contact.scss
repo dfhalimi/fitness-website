@@ -20,7 +20,7 @@
         width: 100%;
         height: 100%;
         padding: 10px;
-        background-color: #eb5668;
+        background-color: $lightred;
         color: #fff;
         box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.4);
         h3 {
@@ -52,9 +52,52 @@
         }
       }
       button.btn {
-        border: none;
+        border: 1px solid $red;
         color: #fff;
         cursor: pointer;
+        &:hover {
+          background-color: transparent;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1092px) {
+  #contact {
+    .contact-info {
+      flex-direction: column-reverse;
+      .contact-text-bg {
+        width: 90%;
+        height: 300px;
+        margin: 30px 0;
+        .contact-text {
+          height: auto;
+        }
+      }
+      form {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 642px) {
+  #contact {
+    .contact-info {
+      .contact-text-bg {
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #contact {
+    .contact-info {
+      .contact-text-bg {
+        height: 400px;
       }
     }
   }

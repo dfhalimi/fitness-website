@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   color: white;
@@ -25,14 +29,11 @@ body {
   color: #fff;
   /*background-color: #313036;*/
   font-family: Arial, Helvetica, sans-serif;
-  a {
-    text-decoration: none;
-    color: #fff;
-    transition: 0.2s ease-in-out;
-    &:hover {
-      color: $red;
-    }
-  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 p {
@@ -70,7 +71,7 @@ section {
 
 #start {
   height: 100vh;
-  background: url(../images/main-bg.jpg), center no-repeat;
+  background: url(../images/main-bg-01.jpg), center no-repeat;
   background-size: cover;
 }
 
@@ -92,6 +93,9 @@ section {
   height: 30%;
   width: 500px;
   margin: 350px 0 0 150px;
+  p {
+    font-size: 22px;
+  }
 }
 
 .btn {
@@ -101,11 +105,13 @@ section {
   width: 200px;
   font-size: 20px;
   text-align: center;
+  transition: 0.2s ease-in-out;
+  border: 1px solid $red;
 }
 
 .btn:hover {
-  background-color: $red;
-  color: #fff;
+  color: $red;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1200px) {
@@ -120,7 +126,6 @@ section {
   }
   #start {
     height: 60vh;
-    background-position: right;
     .start-container {
       display: flex;
       flex-direction: column;
@@ -131,6 +136,15 @@ section {
       h1 {
         font-size: 35px;
       }
+      p {
+        font-size: 16px;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #start {
+    height: 50vh;
   }
 }

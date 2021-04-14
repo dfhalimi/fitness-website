@@ -33,6 +33,23 @@ header ul {
 
 header ul li {
   font-size: 16px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+header ul li:hover {
+  color: #ea3449;
+}
+
+header ul #close {
+  visibility: hidden;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+header ul .active {
+  color: #ea3449;
 }
 
 @media screen and (max-width: 900px) {
@@ -48,8 +65,6 @@ header ul li {
     font-size: 20px;
   }
   header ul {
-    -webkit-transform: translateY(-16px);
-            transform: translateY(-16px);
     position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -61,20 +76,41 @@ header ul li {
         -ms-flex-align: center;
             align-items: center;
     background-color: #ea3449;
-    height: 300px;
+    height: 250px;
     width: 100%;
     top: 0;
     right: 0;
+    -webkit-transform: translateY(-270px);
+            transform: translateY(-270px);
+    -webkit-transition: 0s;
+    transition: 0s;
   }
   header ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #1a1a1d;
     width: 100%;
-    text-align: center;
     height: 50px;
   }
-  header ul li a {
-    width: 100vw;
-    border: 1px solid white;
+  header ul li:hover {
+    color: #fff;
+    background-color: #ea3449;
+  }
+  header ul #close {
+    visibility: visible;
+  }
+  header .toggle-menu {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
 }
 
@@ -89,8 +125,8 @@ header ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
   margin: 100px 0;
 }
 
@@ -117,6 +153,7 @@ header ul li {
 
 #about .about-text {
   width: 40%;
+  margin: 30px 50px;
 }
 
 #about .about-text div {
@@ -146,6 +183,32 @@ header ul li {
 
 #about .about-text #about-3 {
   margin-left: 20%;
+}
+
+@media screen and (max-width: 1092px) {
+  #about .about-text {
+    width: 80%;
+  }
+  #about .about-text #about-2,
+  #about .about-text #about-3 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #about {
+    margin: 50px 0;
+  }
+  #about .img-bg {
+    display: none;
+  }
+  #about .about-text {
+    width: 95%;
+    margin: 0;
+  }
+  #about .about-text div {
+    width: 100%;
+  }
 }
 
 #pricing {
@@ -220,6 +283,30 @@ header ul li {
 #pricing .pricing ul .pricing-title {
   background-color: #ea3449;
   color: #fff;
+}
+
+@media (max-width: 1290px) {
+  #pricing .pricing {
+    margin: 50px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #pricing .pricing .pricing-container {
+    margin: 30px 0;
+    width: 60%;
+  }
+  #pricing .pricing .pricing-container.pricing-main {
+    -webkit-transform: scale(100%) translateY(0);
+            transform: scale(100%) translateY(0);
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #pricing .pricing .pricing-container {
+    width: 100%;
+  }
 }
 
 #contact {
@@ -298,9 +385,46 @@ header ul li {
 }
 
 #contact .contact-info form button.btn {
-  border: none;
+  border: 1px solid #ea3449;
   color: #fff;
   cursor: pointer;
+}
+
+#contact .contact-info form button.btn:hover {
+  background-color: transparent;
+  color: #ea3449;
+}
+
+@media screen and (max-width: 1092px) {
+  #contact .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #contact .contact-info .contact-text-bg {
+    width: 90%;
+    height: 300px;
+    margin: 30px 0;
+  }
+  #contact .contact-info .contact-text-bg .contact-text {
+    height: auto;
+  }
+  #contact .contact-info form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 642px) {
+  #contact .contact-info .contact-text-bg {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #contact .contact-info .contact-text-bg {
+    height: 400px;
+  }
 }
 
 footer {
@@ -345,6 +469,15 @@ footer .footer-upper .footer-right {
           align-items: center;
 }
 
+footer .footer-upper .footer-right a {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+footer .footer-upper .footer-right a:hover {
+  color: #ea3449;
+}
+
 footer .footer-upper .footer-right .footer-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -353,6 +486,8 @@ footer .footer-upper .footer-right .footer-links {
 
 footer .footer-upper .footer-right .footer-links ul {
   list-style: none;
+  padding: 0;
+  margin: 10px 15px;
 }
 
 footer .footer-upper .footer-right .footer-links ul li {
@@ -401,9 +536,29 @@ footer .footer-bottom {
   height: 5vh;
 }
 
+@media screen and (max-width: 540px) {
+  footer {
+    height: auto;
+  }
+  footer .footer-upper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  footer .footer-upper .footer-right {
+    margin: 20px 0;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -424,15 +579,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body a {
+a {
   text-decoration: none;
   color: #fff;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-
-body a:hover {
-  color: #ea3449;
 }
 
 p {
@@ -470,7 +619,7 @@ section {
 
 #start {
   height: 100vh;
-  background: url(../images/main-bg.jpg), center no-repeat;
+  background: url(../images/main-bg-01.jpg), center no-repeat;
   background-size: cover;
 }
 
@@ -502,6 +651,10 @@ section {
   margin: 350px 0 0 150px;
 }
 
+.start-container p {
+  font-size: 22px;
+}
+
 .btn {
   margin: 20px 0;
   background-color: #ea3449;
@@ -509,11 +662,14 @@ section {
   width: 200px;
   font-size: 20px;
   text-align: center;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  border: 1px solid #ea3449;
 }
 
 .btn:hover {
-  background-color: #ea3449;
-  color: #fff;
+  color: #ea3449;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1200px) {
@@ -528,7 +684,6 @@ section {
   }
   #start {
     height: 60vh;
-    background-position: right;
   }
   #start .start-container {
     display: -webkit-box;
@@ -549,6 +704,15 @@ section {
   }
   #start .start-container h1 {
     font-size: 35px;
+  }
+  #start .start-container p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #start {
+    height: 50vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

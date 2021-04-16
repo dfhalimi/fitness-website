@@ -242,8 +242,10 @@ header ul .active {
 }
 
 #pricing .pricing .pricing-container.pricing-main {
-  -webkit-transform: scale(105%) translateY(-25px);
-          transform: scale(105%) translateY(-25px);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 
 #pricing .pricing ul {

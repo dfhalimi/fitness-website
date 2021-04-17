@@ -63,12 +63,13 @@ footer {
   }
   .footer-bottom {
     color: rgba(255, 255, 255, 0.8);
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $red;
     margin: auto 0 0 0;
-    height: 5vh;
+    height: auto;
   }
 }
 

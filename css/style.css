@@ -114,6 +114,12 @@ header ul .active {
   }
 }
 
+@media screen and (max-width: 600px) {
+  header {
+    height: 60px;
+  }
+}
+
 #about {
   background-color: #fff;
   color: #1a1a1d;
@@ -239,6 +245,7 @@ header ul .active {
   border: 1px solid #ea3449;
   -webkit-box-shadow: 3px 4px 10px rgba(255, 255, 255, 0.2);
           box-shadow: 3px 4px 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 #pricing .pricing .pricing-container.pricing-main {
@@ -429,6 +436,24 @@ header ul .active {
   }
 }
 
+@media screen and (max-width: 400px) {
+  #contact {
+    margin-bottom: 100px;
+  }
+  #contact .contact-info .contact-text-bg {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #contact {
+    margin-bottom: 50px;
+  }
+  #contact .contact-info .contact-text-bg {
+    height: 550px;
+  }
+}
+
 footer {
   background-color: #1a1a1d;
   height: 35vh;
@@ -524,6 +549,7 @@ footer .footer-upper .footer-right .social-icons i:hover {
 
 footer .footer-bottom {
   color: rgba(255, 255, 255, 0.8);
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,7 +561,7 @@ footer .footer-bottom {
           align-items: center;
   background-color: #ea3449;
   margin: auto 0 0 0;
-  height: 5vh;
+  height: auto;
 }
 
 @media screen and (max-width: 540px) {
@@ -715,6 +741,24 @@ section {
 @media screen and (max-width: 600px) {
   #start {
     height: 50vh;
+  }
+  #start .start-container {
+    margin: 140px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #start .start-container h1 {
+    font-size: 20px;
+  }
+  #start .start-container p {
+    font-size: 14px;
+  }
+  #start .btn {
+    width: 140px;
+    margin: 10px 0;
+    padding: 7px;
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -146,5 +146,27 @@ section {
 @media screen and (max-width: 600px) {
   #start {
     height: 50vh;
+    .start-container {
+      margin: 140px 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #start {
+    .start-container {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .btn {
+      width: 140px;
+      margin: 10px 0;
+      padding: 7px;
+      font-size: 16px;
+    }
   }
 }

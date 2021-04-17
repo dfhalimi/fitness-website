@@ -102,3 +102,25 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  #contact {
+    margin-bottom: 100px;
+    .contact-info {
+      .contact-text-bg {
+        height: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #contact {
+    margin-bottom: 50px;
+    .contact-info {
+      .contact-text-bg {
+        height: 550px;
+      }
+    }
+  }
+}
